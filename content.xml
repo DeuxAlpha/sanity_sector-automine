@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<content id="SanitySectorMiner"
+         author="DeuxAlpha"
+         name="Sanity - Sector Miner"
+         description="Slightly adjusts the default sector miner to allow for mining and selling multiple wares in sectors other than anchor space."
+         version="090"
+         save="0">
+</content>

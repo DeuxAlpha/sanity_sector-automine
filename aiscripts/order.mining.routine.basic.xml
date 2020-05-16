@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<diff>
+  <!-- Make original ware type internal -->
+  <replace sel="//aiscript/order/params/param[@name='warebasket']/@type">internal</replace>
+  <!-- Switch from single ware to many (i.e. list) -->
+  <add sel="//aiscript/order/params/param[@name='range']" pos="before">
+    <param name="warebasket_replacement" required="true" default="this.ship.warebasket.list" type="list"
+           text="{1041, 10146}" comment="Wares. List of resources that we will supply.">
+      <input_param name="type" value="'ware'" />
+      <input_param name="cancarry" value="this.ship" />
+    </param>
+  </add>
+  <!-- Replace original warebasket with our list. -->
+  <replace sel="//aiscript/attention/actions/run_script/param[@name='warebasket']/@value">$warebasket_replacement</replace>
+  <!--
+  Provide option to sell wares outside of anchor sector. However, the pilot will still need to mine resources in the
+  anchor sector ONLY.
+  Logic for possible distance of selling goods (based on skill) is the exact same as advanced and expert mining.
+  -->
+  <replace sel="//aiscript/order/params/param[@name='maxsell']/@type">number</replace>
+  <replace sel="//aiscript/order/params/param[@name='maxsell']/@default">[@this.ship.commander.tradenpc.skill.management, @this.ship.pilot.skill.piloting].max / 3</replace>
+  <add sel="//aiscript/order/params/param[@name='maxsell']">
+    <input_param name="startvalue" value="0" />
+    <input_param name="min" value="0" />
+    <input_param name="max"
+                 value="[@this.ship.commander.tradenpc.skill.management, @this.ship.pilot.skill.piloting].max / 3" />
+    <input_param name="step" value="1" />
+  </add>
+  <!-- Remove unnecessary original warebasket logic -->
+  <remove sel="//aiscript/attention/actions/do_if[@value='not @$warebasket.count']"/>
+  <remove sel="//aiscript/attention/actions/do_else"/>
+</diff>
