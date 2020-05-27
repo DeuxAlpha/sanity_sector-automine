@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<diff>
+  <replace sel="//mdscript/cues/library[@name='CheckOrderIsMining']/actions/do_if[@value='$orderID != null']">
+    <do_if value="$orderID == 'MiningRoutine' or $orderID == 'MiningRoutine_Basic' or $orderID == 'MiningRoutine_Advanced' or $orderID == 'MiningRoutine_Expert' or $orderID == 'Sanity_SectorAutoMine'">
+      <set_value name="$isMiningOrder" exact="true" />
+    </do_if>
+  </replace>
+</diff>

@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<content author="DeuxAlpha" name="Sanity - Sector Miner - Civilian Fleets Compatibility" description="Compatibility patch for Sanity - Sector Miner and Civilian Fleets." version="091" save="0" date="2020-05-16" sync="false" lastupdate="1589643864">
+  <dependency id="ws_2092839403" optional="false" name="Civilian Fleets"></dependency>
+  <dependency id="ws_2098605344" optional="false" name="Sanity - Sector Miner"></dependency>
+</content>
