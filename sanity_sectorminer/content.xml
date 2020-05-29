@@ -1,11 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<content id="ws_2098605344"
-         author="DeuxAlpha"
-         name="Sanity - Sector Miner"
-         description="Adds a new sector miner order to allow for mining and selling multiple wares in sectors other than anchor space."
-         version="091"
-         save="0"
-         date="2020-05-16"
-         sync="false"
-         lastupdate="1589643864">
+<content id="ws_2098605344" author="DeuxAlpha" name="Sanity - Sector Miner" description="Adds a new sector miner order to allow for mining and selling multiple wares in sectors other than anchor space." version="091" save="0" date="2020-05-28" sync="false" lastupdate="1590711558">
 </content>
