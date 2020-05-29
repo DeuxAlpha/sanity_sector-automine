@@ -1,4 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<content author="DeuxAlpha" name="Sanity - Sector Miner - Level 2 Requirement" description="Sanity - Sector Miner with level 2 requirement." version="091" save="0" sync="false">
+<content author="DeuxAlpha"
+         name="Sanity - Sector Miner - Level 2 Requirement"
+         description="Sanity - Sector Miner with level 2 requirement."
+         version="091"
+         save="0"
+         sync="false">
   <dependency id="ws_2098605344" optional="false" name="Sanity - Sector Miner"></dependency>
 </content>
