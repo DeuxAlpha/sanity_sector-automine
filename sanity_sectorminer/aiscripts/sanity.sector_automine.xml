@@ -3,7 +3,7 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:noNamespaceSchemaLocation="x4_ai.xsd">
   <order id="Sanity_SectorAutoMine"
-         name="Sanity - Sector AutoMine" description="Slightly makes Sector AutoMine less shit."
+         name="Sanity - Sector AutoMine" description="Slightly improves upon the Sector AutoMine functionality."
          category="mining" infinite="true">
     <params>
       <!-- Providing the ability to select multiple wares to be mined and traded. -->
